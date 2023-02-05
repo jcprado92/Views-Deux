@@ -1,10 +1,10 @@
 import React from 'react'
-import Views from '../Components/Views/Views'
+import ViewsContainer from '../Components/Views/ViewsContainer'
 
 function Index() {
   return (
     <div>
-        <Views />
+      <ViewsContainer />
     </div>
   )
 }

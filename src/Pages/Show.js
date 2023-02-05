@@ -1,10 +1,9 @@
 import React from 'react'
-import ViewCard from '../Components/ViewCard/ViewCard'
-
+import ViewDetail from '../Components/Views/ViewDetail'
 function Show() {
   return (
     <div>
-      <ViewCard />
+      <ViewDetail />
     </div>
   )
 }
