@@ -1,8 +1,14 @@
 import React from 'react'
 
-function ViewCard() {
+function ViewCard({ view }) {
+
+  const { name, location, url } = view
   return (
-    <div>Heres a single View</div>
+    <div>
+      <h1>{name}</h1>
+      <img src={url}/>
+      <h3>{location}</h3>
+    </div>
   )
 }
 
