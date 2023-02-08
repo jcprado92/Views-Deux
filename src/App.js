@@ -18,7 +18,7 @@ function App() {
         <Route path='/views/:id' element={ <Show /> } />
         <Route path='/views/new' element={ < New /> } />
         <Route path='/views/:id/edit' element={ <Edit /> } />
-         <Route path='*' element={ <FourOFour /> } /> 
+        <Route path='*' element={ <FourOFour /> } /> 
       </Routes>
       </div>
     </Router>
