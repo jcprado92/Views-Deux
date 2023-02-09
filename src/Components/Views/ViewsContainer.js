@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ViewCard from '../Views/ViewCard';
-import './ViewsContainer.scss'
-// const API = process.env.REACT_APP_API_URL;
 
+import '../Views/ViewsContainer.scss'
+
+// const API = process.env.REACT_APP_API_URL;
 function ViewsContainer() {
   const [views, setViews] = useState([]);
 
@@ -17,8 +18,7 @@ function ViewsContainer() {
 
   return (
     <div className="viewsContainer">
-      {/* <h1>These are some views</h1> */}
-      {views.map(view => <ViewCard view={view} />)}
+      {views.map(view => <ViewCard key={view.id} view={view} id={view.id}/>)}
     </div>
   );
 }
