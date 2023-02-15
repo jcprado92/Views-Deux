@@ -34,9 +34,9 @@ function ViewDetail() {
         <img src={url}/>
         <h3>{location}</h3>
         <h4>{is_favorite ? "🌊What a View 🌊" : ""}</h4>
-        <Link to={`/views/${id}/edit`}><button>Edit View</button></Link>
+        <Link to={`/views/${id}/edit`}><button className='viewDetail__button--onClick'>Edit View</button></Link>
         <button onCLick={handleDelete}>Delete This View</button>
-        <Link to={`/views`}><button>Nevermind</button></Link>
+        <Link to={`/views`}><button> Nah Nevermind</button></Link>
 
     </div>
   )
