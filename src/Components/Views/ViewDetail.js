@@ -11,15 +11,15 @@ function ViewDetail() {
   const navigate = useNavigate();
   
   useEffect(() =>{
-    axios.get(`http://localhost:8080/views/${id}`)
+    axios.get(`http://localhost:3036/views/${id}`)
     .then(res => setView(res.data.payload))
     .catch(err => console.log(err)) 
-  }, [])
+  }, [id])
 
   const deleteView = () => {
-    axios.delete(`http://localhost:8080/views/${id}`)
+    axios.delete(`http://localhost:3036/views/${id}`)
     .then(navigate('/views'))
-    .catch(err => console.error('error'))
+    .catch(err => console.error(err))
   }
 
   const handleDelete = () => {
@@ -35,7 +35,7 @@ function ViewDetail() {
         <h3>{location}</h3>
         <h4>{is_favorite ? "🌊What a View 🌊" : ""}</h4>
         <Link to={`/views/${id}/edit`}><button className='viewDetail__button--onClick'>Edit View</button></Link>
-        <button onCLick={handleDelete}>Delete This View</button>
+        <button onClick={handleDelete}>Delete This View</button>
         <Link to={`/views`}><button> Nah Nevermind</button></Link>
 
     </div>

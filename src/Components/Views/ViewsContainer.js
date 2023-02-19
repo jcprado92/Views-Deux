@@ -10,7 +10,7 @@ function ViewsContainer() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/views`)
+      .get(`http://localhost:3036/views`)
       .then((res) => {
       setViews(res.data.payload);
     });
