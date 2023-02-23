@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-
+import '../Forms/forms.scss'
 
 function NewView() {
 
@@ -76,7 +76,7 @@ function NewView() {
         />
         <br />
         <br />
-        <input type="submit" />
+        <input type="submit" className='submit'/>
       </form>
     </div>
   )
