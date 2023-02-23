@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import '../Forms/forms.scss'
 
-function EditView() {
+const EditView = () => {
 
   const { id } = useParams();
   const navigate = useNavigate()
@@ -95,7 +96,7 @@ function EditView() {
       <Link to={`/views/${id}`}>
         <button>Fuhgeddaboudit!</button>
       </Link>
-        <input type="submit" />
+        <input type="submit" className='submit'/>
       </form>
     </div>
   )
