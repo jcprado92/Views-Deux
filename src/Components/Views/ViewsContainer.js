@@ -4,13 +4,14 @@ import ViewCard from '../Views/ViewCard';
 
 import '../Views/ViewsContainer.scss'
 
-// const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL;
+
 function ViewsContainer() {
   const [views, setViews] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3036/views`)
+      .get(`${API}/views`)
       .then((res) => {
       setViews(res.data.payload);
     });
