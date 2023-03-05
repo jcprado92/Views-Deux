@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import '../Forms/forms.scss'
 
+const API = process.env.REACT_APP_API_URL;
+
 const EditView = () => {
 
   const { id } = useParams();
@@ -16,7 +18,7 @@ const EditView = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:3036/views/${id}`)
+    axios.get(`${API}/views/${id}`)
     .then(res => setView(res.data.payload))
     .catch(err => console.log(err))
   }, [id])
@@ -34,7 +36,7 @@ const EditView = () => {
   //the users input to update said view
 
   const editView = (updatedView) => {
-    axios.put(`http://localhost:3036/views/${id}`, updatedView)
+    axios.put(`${API}/views/${id}`, updatedView)
     .then(() => navigate('/views'))
     .catch((c) => console.warn('catch', c));
   }

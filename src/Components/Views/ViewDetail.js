@@ -3,6 +3,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Views/ViewDetail.scss'
 
+const API = process.env.REACT_APP_API_URL
+
 function ViewDetail() {
 
   const [ view, setView ] = useState([]);
@@ -11,13 +13,13 @@ function ViewDetail() {
   const navigate = useNavigate();
   
   useEffect(() =>{
-    axios.get(`http://localhost:3036/views/${id}`)
+    axios.get(`${API}/views/${id}`)
     .then(res => setView(res.data.payload))
     .catch(err => console.log(err)) 
   }, [id])
 
   const deleteView = () => {
-    axios.delete(`http://localhost:3036/views/${id}`)
+    axios.delete(`${API}/views/${id}`)
     .then(navigate('/views'))
     .catch(err => console.error(err))
   }
