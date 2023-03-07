@@ -6,7 +6,9 @@ import Show from './Pages/Show';
 import New from './Pages/New';
 import Edit from './Pages/Edit'
 import FourOFour from './Pages/FourOFour';
+
 import Footer from "./Components/Footer/Footer";
+
 
 import "./App.css";
 
