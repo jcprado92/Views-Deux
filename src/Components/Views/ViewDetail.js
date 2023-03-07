@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../Views/ViewDetail.scss'
+import './ViewDetail.scss'
 
 
 const API = process.env.REACT_APP_API_URL

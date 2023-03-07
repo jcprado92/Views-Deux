@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import logo from '../../images/logo.png'
-import '../Nav/nav.scss'
+import './Nav.scss'
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);

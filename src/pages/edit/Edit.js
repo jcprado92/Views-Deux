@@ -1,5 +1,5 @@
 import React from 'react'
-import EditView from '../Components/Forms/EditView'
+import EditView from '../../components/editView/EditView'
 
 function Edit() {
   return (

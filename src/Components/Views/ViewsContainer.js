@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import ViewCard from '../Views/ViewCard';
+import ViewCard from './ViewCard';
 
-import '../Views/ViewsContainer.scss'
+import './ViewsContainer.scss'
 
 
 const API = process.env.REACT_APP_API_URL;

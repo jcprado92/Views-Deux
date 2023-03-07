@@ -1,5 +1,5 @@
 import React from 'react'
-import ViewDetail from '../Components/Views/ViewDetail'
+import ViewDetail from '../../components/views/ViewDetail'
 function Show() {
   return (
     <div>

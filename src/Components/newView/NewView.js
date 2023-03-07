@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-import '../Forms/forms.scss'
+import './NewView.scss'
 
 
 const API = process.env.REACT_APP_API_URL

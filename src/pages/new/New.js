@@ -1,6 +1,5 @@
 import React from 'react'
-import NewView from '../Components/Forms/NewView'
-
+import NewView from '../../components/newView/NewView'
 function New() {
   return (
     <div>

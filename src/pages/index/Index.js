@@ -1,5 +1,5 @@
 import React from 'react'
-import ViewsContainer from '../Components/Views/ViewsContainer'
+import ViewsContainer from '../../components/views/ViewsContainer'
 function Index() {
   return (
     <div>
