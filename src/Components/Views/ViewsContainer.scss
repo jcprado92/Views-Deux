@@ -4,10 +4,13 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
   row-gap: 10px;
-  margin-top: 50px;
-  height: 94vh;
+
+  // margin-top: 50px;
+  height: 89.5vh;
   overflow-y: scroll;
-  margin: 10px 0 10px 0;
+  // margin: 10px 0 10px 0;
+  padding: 15%;
+
 
   img {
     border-radius: 8%;
@@ -37,9 +40,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 8%;
+
+  background-color: #f8edeb;
+
 //   background-color: #f8edeb;
   background-color: #f8edeb;
 //   border: 1px solid #665e8f;
+
 }
 
 a {

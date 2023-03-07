@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import '../Forms/forms.scss'
 
+
 const API = process.env.REACT_APP_API_URL
+
 
 function NewView() {
 
@@ -17,7 +19,9 @@ function NewView() {
   const navigate = useNavigate();
 
   const addView = () => {
+
     axios.post(`${API}/views`, view)
+
     .then(navigate('/views'))
     .catch(err => console.error(err))
   }

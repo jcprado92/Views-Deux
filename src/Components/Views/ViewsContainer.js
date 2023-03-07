@@ -4,7 +4,9 @@ import ViewCard from '../Views/ViewCard';
 
 import '../Views/ViewsContainer.scss'
 
+
 const API = process.env.REACT_APP_API_URL;
+
 
 function ViewsContainer() {
   const [views, setViews] = useState([]);
