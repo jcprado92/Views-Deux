@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import './NewView.scss'
 
-
 const API = process.env.REACT_APP_API_URL
-
 
 function NewView() {
 
@@ -18,16 +16,15 @@ function NewView() {
 
   const navigate = useNavigate();
 
-  const addView = () => {
-
-    axios.post(`${API}/views`, view)
-
+  const addView = (view) => {
+    axios
+    .post(`${API}/views`, view)
     .then(navigate('/views'))
     .catch(err => console.error(err))
   }
 
   const handleTextChange = (e) => {
-    setView([{...view, [e.target.id] : e.target.value}]) 
+    setView({...view, [e.target.id] : e.target.value}) 
   }
 
   const handleSubmit = (e) => {
