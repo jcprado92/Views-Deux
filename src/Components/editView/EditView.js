@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import './EditView.scss'
 
+import { TextField, Button } from '@mui/material';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -52,56 +53,62 @@ const EditView = () => {
 
   return (
     <div className="edit">
+      <div className='editForm'>
       <form onSubmit={handleSubmit} className="edit">
       <h1>Edit View</h1>
         <label htmlFor="name">Name:</label>
-        <input
+        <TextField
           id="name"
           value={view.name}
           type="text"
           onChange={handleTextChange}
           placeholder="Name"
+          variant='standard'
           required
         />
           <br />
           <br />
         <label htmlFor="url">URL:</label>
-        <input
+        <TextField
           id="url"
           type="text"
           value={view.url}
           placeholder="URL"
+          variant='standard'
           onChange={handleTextChange}
         />
           <br />
           <br />
         <label htmlFor="location">Location:</label>
-        <input
+        <TextField
           id="location"
           type="text"
           name="locations"
           value={view.location}
           placeholder="Location"
+          variant='standard'
           onChange={handleTextChange}
         />
           <br />
           <br />
         <label htmlFor="is_favorite">Favorite:</label>
-        <input
+        <TextField
           id="is_favorite"
           type="text"
           name="is_favorite"
           value={view.is_favorite}
           placeholder="Favorite?"
+          variant='standard'
           onChange={handleTextChange}
         />
         <br />
         <br />
       <Link to={`/views/${id}`}>
-        <button>Fuhgeddaboudit!</button>
+        <Button variant='outlined'>Fuhgeddaboudit!</Button>
       </Link>
-        <input type="submit" className='submit'/>
+        <Button type="submit" variant='outlined'>Submit</Button>
       </form>
+      </div>
     </div>
   )
 }

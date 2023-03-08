@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import './ViewDetail.scss'
+
 function ViewCard({ view, id }) {
 
   const { name, location, url } = view;

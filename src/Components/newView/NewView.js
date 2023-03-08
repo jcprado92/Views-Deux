@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import './NewView.scss'
 
+import { TextField, Button } from '@mui/material';
+
 const API = process.env.REACT_APP_API_URL
 
 function NewView() {
@@ -37,7 +39,7 @@ function NewView() {
       <form onSubmit={handleSubmit} className="new">
       <h1>Let's Add Something New!</h1>
         <label htmlFor="name">Name:</label>
-        <input
+        <TextField
           id="name"
           value={view.name}
           type="text"
@@ -45,20 +47,23 @@ function NewView() {
           placeholder="Name"
           required
         />
+
           <br />
           <br />
         <label htmlFor="url">URL:</label>
-        <input
+        <TextField
           id="url"
           value={view.url}
           type="text"
           placeholder="URL"
           onChange={handleTextChange}
         />
+        
           <br />
           <br />
         <label htmlFor="location">Location:</label>
-        <input
+        <TextField
+        
           id="location"
           type="text"
           name="locations"
@@ -66,10 +71,11 @@ function NewView() {
           placeholder="Location"
           onChange={handleTextChange}
         />
+      
           <br />
           <br />
         <label htmlFor="is_favorite">Favorite:</label>
-        <input
+        <TextField
           id="is_favorite"
           type="text"
           name="is_favorite"

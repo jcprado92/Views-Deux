@@ -35,7 +35,6 @@ function ViewDetail() {
   const { name, url, location, is_favorite } = view;
   return (
     <div className='viewDetail'>
-        <h1>Peep Some Deets</h1>
         <h2>{name}</h2>
         <img src={url}/>
         <h3>{location}</h3>

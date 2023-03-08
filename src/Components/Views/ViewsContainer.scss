@@ -37,16 +37,16 @@
 }
 
 .viewCard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.297);
   transition: 0.3s;
   border-radius: 8%;
 
-  background-color: #f8edeb;
+  background-color: #f8edeb5d;
 
-//   background-color: #f8edeb;
-  background-color: #f8edeb;
-//   border: 1px solid #665e8f;
+}
 
+.viewCard:hover{
+  opacity: .9;
 }
 
 a {
